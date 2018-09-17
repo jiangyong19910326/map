@@ -2,14 +2,50 @@
 
 <p align="center"> a map API SDK.</p>
 
-
-## Installing
+## 安装
 
 ```shell
 $ composer require jiangyong/map -vvv
 ```
 
-## Usage
+## 配置
+```shell
+use Jiangyong\Map\Map;
+
+$key = 'xxxxxxxxxxxxxxxxxxxxxxxxxxx';
+
+$map = new Map($key);
+```
+## 通过输入地址获取解析
+```shell
+$response = $map->getAddress('IFS国际金融中心','成都')
+```
+
+
+## 通过输入经纬度获取解析
+
+```shell
+$response = $map->getLocation('104.081298,30.655321');
+```
+## 通多输入地址获取解析xml格式 可选参数,json,
+```shell
+$resopnse = $map->getAddress(('IFS国际金融中心','成都','false','xml'))
+```
+## 通过输入经纬度获取解析xml格式，可选参数,json
+```shell
+$resopnse = $map->getLocation(('104.081298,30.655321',1000,'all','false','xml'))
+```
+## 在laravel 中的使用
+在 Laravel 中使用也是同样的安装方式，配置写在 config/services.php 中 加入：
+```shell
+ 'map' => [
+        'key' => env('MAP_API_KEY'),
+    ],
+```
+然后在 .env 中配置 WEATHER_API_KEY ：
+```shell
+MAP_API_KEY=xxxxxxxxxxxxxxxxxxxxx
+```
 
 TODO
 
