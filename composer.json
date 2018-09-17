@@ -1,0 +1,28 @@
+{
+    "name": "jiangyong\/map",
+    "description": "a map API SDK",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "jiangyong",
+            "email": "826834737@qq.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^6.3",
+        "mockery/mockery": "^1.1",
+        "phpunit/phpunit": "~5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Jiangyong\\Map\\": "./src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Overtrue\\Weather\\ServiceProvider"
+            ]
+        }
+    }
+}
