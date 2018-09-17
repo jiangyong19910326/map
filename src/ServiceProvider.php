@@ -16,7 +16,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
     public function register()
     {
         $this->app->singleton(Map::class, function(){
-            return new Weather(config('services.map.key'));
+            return new Map(config('services.map.key'));
         });
 
         $this->app->alias(Map::class, 'map');

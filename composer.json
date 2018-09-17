@@ -21,7 +21,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Overtrue\\Weather\\ServiceProvider"
+                "Jiangyong\\Map\\ServiceProvider"
             ]
         }
     }
